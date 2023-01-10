@@ -18,7 +18,7 @@ public class ConvidadosController {
 	@GetMapping(value ="/convidados")
 	public ModelAndView listar() {
 		
-		ModelAndView modelAndView = new ModelAndView("ListaConvidado");
+		ModelAndView modelAndView = new ModelAndView("ListaConvidados");
 		
 		modelAndView.addObject("convidadosRepository", convidadosRepository.findAll());
 		

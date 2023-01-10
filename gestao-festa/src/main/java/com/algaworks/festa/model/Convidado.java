@@ -18,7 +18,7 @@ public class Convidado implements Serializable {
 	
 	private String nome;
 	
-	private Integer quantidadeAcompanhante;
+	private Integer quantidadeAcompanhantes;
 
 	public Long getId() {
 		return id;
@@ -36,12 +36,12 @@ public class Convidado implements Serializable {
 		this.nome = nome;
 	}
 
-	public Integer getQuantidadeAcompanhante() {
-		return quantidadeAcompanhante;
+	public Integer getQuantidadeAcompanhantes() {
+		return quantidadeAcompanhantes;
 	}
 
-	public void setQuantidadeAcompanhante(Integer quantidadeAcompanhante) {
-		this.quantidadeAcompanhante = quantidadeAcompanhante;
+	public void setQuantidadeAcompanhantes(Integer quantidadeAcompanhante) {
+		this.quantidadeAcompanhantes = quantidadeAcompanhante;
 	}
 
 	@Override
