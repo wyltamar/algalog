@@ -1,7 +1,8 @@
 package com.algaworks.algalog.api.controller;
 
 import java.util.List;
-import java.util.Optional;
+
+import javax.validation.Valid;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -42,14 +43,14 @@ public class ClienteController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Cliente> adicionar(@RequestBody Cliente cliente){
+	public ResponseEntity<Cliente> adicionar(@RequestBody @Valid Cliente cliente){
 		
 		return new ResponseEntity<Cliente>(clienteRepository.save(cliente),
 											HttpStatus.CREATED);
 	}
 	
 	@PutMapping
-	public ResponseEntity<Cliente> atualizar(@RequestBody Cliente cliente){
+	public ResponseEntity<Cliente> atualizar(@RequestBody @Valid Cliente cliente){
 		
 		if(!clienteRepository.existsById(cliente.getId())) {
 			return ResponseEntity.notFound().build();
