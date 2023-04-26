@@ -26,10 +26,10 @@ public class Cliente {
 	private Long id;
 	
 	@NotBlank
-	@Size(max = 60, min = 3)
+	@Size(max = 60, min = 3, message = "O campo nome é obrigatório")
 	private String nome;
 	
-	@Email
+	@Email(message = "Informe um email válido")
 	private String email;
 	
 	@Size(max = 20)
